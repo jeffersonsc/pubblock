@@ -1,0 +1,26 @@
+<h1>Ordem Nº <%= @order.id %> </h1>
+
+<table class="table table-responsive table-hover">
+	<thead>
+		<tr>
+			<th>Numero</th>
+			<th>Nome</th>
+			<th>Autor</th>
+			<th>Autenticação autor</th>
+			<th>Autenticação consumidor</th>
+			<th>Data compra</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%= @order.id %></td>
+			<td><%= @order.book.book_file_identifier %></td>
+			<td><%= @order.book.user.fullname %></td>
+			<td><%= @order.book.authentication %></td>
+			<td><%= @order.authentication %></td>
+			<td><%= @order.created_at %></td>
+			<td><%= link_to 'Baixa aqui', @order.file.url %></td>
+		</tr>
+	</tbody>
+</table>

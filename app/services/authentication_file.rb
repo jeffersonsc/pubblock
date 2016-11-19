@@ -8,6 +8,7 @@ class AuthenticationFile
 		@book.update(authentication: hash)
 
 		#TODO colocar código de publicar no block chain
+		BlockChainManager.new.createBook(@book.authentication, @book.user.fullname, @book.title, @book.description)
 	end
 	
 end

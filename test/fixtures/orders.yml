@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  book: one
+  price: 9.99
+  authentication: MyString
+
+two:
+  user: two
+  book: two
+  price: 9.99
+  authentication: MyString
