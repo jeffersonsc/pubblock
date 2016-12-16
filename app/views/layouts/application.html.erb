@@ -9,6 +9,11 @@
   </head>
 
   <body>
-    <%= yield %>
+  	<%= link_to "Meus livros", books_url %> | 
+  	<%= link_to "Minhas compras", orders_url %> |
+
+  	<div class="container">
+    	<%= yield %>
+    </div>
   </body>
 </html>
