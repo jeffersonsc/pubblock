@@ -4,7 +4,7 @@ require 'json'
 class BitoneApi
 	def sale(parameters = {})
 		begin
-			r = RestClient.post('https://80e72aada9224204a8c94042b563a3f8-vp0.us.blockchain.ibm.com:5001/chaincode', {
+			r = RestClient.post('https://api.bit.one/bitOneApi/gw/req', {
 			  jsonrpc: "2.0",
 			  method: "invoke",
 			  params: {
