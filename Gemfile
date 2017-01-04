@@ -35,6 +35,7 @@ gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 gem 'prawn'
+gem 'combine_pdf'
 gem 'rest-client'
 
 group :development, :test do
