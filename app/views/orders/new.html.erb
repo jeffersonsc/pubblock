@@ -3,12 +3,12 @@
 <p>
 	<strong>Nome</strong> <%= @book.book_file_identifier %><br />
 	<strong>Autor</strong> <%= @book.user.fullname %><br />
-	<strong>Preço</strong> R$ 10,90 <br />
+	<strong>Preço</strong> <%= @book.price %> <br />
 </p>
 
 <%= simple_form_for(@order) do |f| %>
 	<%= f.input :book_id, as: :hidden, input_html: {value: @book.id } %>
-	<%= f.input :price, as: :hidden, input_html: {value: 10.9 } %>
+	<%= f.input :price, as: :hidden, input_html: {value: @book.price } %>
 
 	<%= f.button :submit, "Comprar agora", class: "btn btn-md btn-success" %>
 <% end %>

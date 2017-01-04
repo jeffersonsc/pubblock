@@ -3,6 +3,7 @@
  
   <div class="form-inputs">
     <%= f.input :title %>
+    <%= f.input :price, :input_html => {:type => "decimal", :precision => 2 } %>
     <%= f.input :description, as: :text %>
     <%= f.input :book_file, as: :file %>
   </div>

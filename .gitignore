@@ -10,6 +10,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
+/public/uploads/tmp/*
+public/uploads/book/*
+public/uploads/order/*
 !/log/.keep
 !/tmp/.keep
 
