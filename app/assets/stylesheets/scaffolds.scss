@@ -132,12 +132,11 @@ body{
   background-color:#00264d !important;
   color:#FFF !important;
 }
-.navbarcustom a{
-  color:#FFF !important;
+
+navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #001a33 !important;
+    color: #fff !important;
 }
-.navbarcustom a:hover{
-  color:#C3C3C3 !important;
-}
-.book{
-  height:200px !important;
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFF !important;
 }
