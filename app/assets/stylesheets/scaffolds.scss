@@ -87,3 +87,56 @@ div {
 label {
   display: block;
 }
+
+.row-same-height {
+  display: table;
+  width: 100%;
+  /* fix overflow */
+  table-layout: fixed;
+}
+
+@media (min-width: 768px) {
+  .col-sm-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+
+
+article {
+  float: left;
+  width: 23%;
+  background: #ccc;
+  margin: 10px 1%;
+  padding: 1%;
+}
+
+body{
+  padding:20px;
+}
+.container{
+  background: #dedede;
+  min-width:320px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0px auto;
+}
+.row{
+  display:table;
+  margin: 0 -10px 0;
+  border-collapse:separate;
+  border-spacing: 20px 10px; /*use border-spacing instead of margins*/
+}
+
+.navbarcustom{
+  background-color:#00264d !important;
+  color:#FFF !important;
+}
+
+navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #001a33 !important;
+    color: #fff !important;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFF !important;
+}

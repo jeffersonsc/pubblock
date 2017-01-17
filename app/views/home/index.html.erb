@@ -1,18 +1,19 @@
-<h1>Todos livros</h1>
-
-<table class="table table-responsive">
-	<tr>
-		<th>Nome</th>
-		<th>Autor</th>
-		<th></th>
-	</tr>
-	<tbody>
-		<% @books.each do |book| %>
-			<tr>
-				<td><%= book.book_file_identifier %></td>
-				<td><%= book.user.fullname %></td>
-				<td><%= link_to "Comprar", new_order_url(book_id: book.id) %></td>				
-			</tr>
-		<% end %>
-	</tbody>
-</table>
+<div class="row">
+   <div class="paddingBlock">
+    <div class="equalHMRWrap eqWrap">
+      <% @books.each do |book| %>
+        <div class="equalHMR eq panel">
+          <div class="row" style="height: 78%;">
+            <h3><%= truncate(book.title,:length => 70) %></h3>
+            <p><b style="font-size: 10px;"><%= book.user.fullname %></b></p>
+            <p><%= truncate(book.description,:length => 200) %></p>
+            <label for="">R$ <%= book.price %></label>
+          </div>
+          <div class="row">
+          <%= link_to "Comprar", new_order_url(book_id: book.id),:class => "btn btn-success"%>
+          </div>  
+        </div>
+      <% end %>
+    </div>
+</div>
+</div>

@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>
 
 <h1>Books</h1>
 
@@ -28,4 +28,28 @@
 
 <br>
 
-<%= link_to 'New Book', new_book_path %>
+<%= link_to 'New Book', new_book_path %>-->
+
+<div class="row">
+<h1>Meus livros</h1>
+   <div class="paddingBlock">
+    <div class="equalHMRWrap eqWrap">
+      <% @books.each do |book| %>
+        <div class="equalHMR eq panel">
+          <div class="row" style="height: 70%;">
+            <h3><%= truncate(book.title,:length => 70) %></h3>
+            <p><b style="font-size: 10px;"><%= book.user.fullname %></b></p>
+            <p><%= truncate(book.description,:length => 200) %></p>
+          </div>
+          <div class="row">
+            <p><%= "#{book.authentication}" %></p>
+            <%= link_to "Exibir", book,:class => "btn btn-primary col-md-33 action-btn" %>
+            <%= link_to "Editar", edit_book_path(book),:class => "btn btn-primary col-md-33 action-btn" %>
+            <%= link_to "Deletar", book, method: :delete, data: { confirm: 'Are you sure?' },:class => "btn btn-default col-md-33 action-btn" %>
+          </div>  
+        </div>
+      <% end %>
+    </div>
+</div>
+</div>
+

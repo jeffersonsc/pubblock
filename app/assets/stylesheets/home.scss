@@ -1,3 +1,41 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.paddingBlock {
+    padding: 20px 0;
+}
+
+.eqWrap {
+    display: flex;
+}
+
+.eq {
+    padding: 10px;
+}
+
+.equalHW {
+    flex: 1;
+}
+
+.equalHMWrap {
+    justify-content: space-between;
+}
+
+.equalHM {
+    width: 32%;
+}
+
+.equalHMRWrap {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.equalHMR {
+    width: 32%;
+    margin-bottom: 2%;
+}
+
+.equalHMVWrap {
+    flex-wrap: wrap;
+}

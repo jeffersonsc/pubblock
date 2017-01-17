@@ -6,13 +6,19 @@ class GeneratePdf
 	end
 
 	def exec
+		prawn_file = "/tmp/#{@consumer.id}-temp-#{@book.book_file_identifier}"
 		path = "/tmp/#{@consumer.id}-#{@book.book_file_identifier}"
 		filename = "#{Rails.root}/public#{@book.book_file.url}"
 		consumerx = @consumer.id
 		
-		Prawn::Document.generate(path, :template => filename) do
+		Prawn::Document.generate(prawn_file) do
 		  text "Esse livro é propriedade de PubBlock - Usuário #{consumerx}", :align => :center
 		end
+
+		pdf = CombinePDF.new
+		pdf << CombinePDF.load(prawn_file)
+		pdf << CombinePDF.load(filename)
+		pdf.save path
 
 		File.open(path) do |f|
 		  @order.file = f
